@@ -9,6 +9,6 @@ BEGIN
       FROM Employee e2
       WHERE e2.salary > e1.salary
     ) = N - 1
-    LIMIT 1
+    
   );
 END
