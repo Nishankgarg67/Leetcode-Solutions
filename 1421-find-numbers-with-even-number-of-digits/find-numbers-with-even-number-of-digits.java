@@ -1,28 +1,19 @@
 class Solution {
     public int findNumbers(int[] nums) {
-        if(nums.length==0){
-            return 0;
+        int digit = 0;
+        for (int index = 0; index < nums.length; index++) {
+            int count = 0;
+            int temp = nums[index];
+            while (temp > 0) {
+                count++;
+                temp = temp / 10;
+
+            }
+            if (count % 2 == 0) {
+                digit++;
+            }
+
         }
-        int count=0;
-       for( int ar : nums ){
-           if(even(ar))
-               count++;
-       }
-        return count;
-    }
-    static boolean even (int ar){
-        int number = digit(ar);
-        if(number %2==0){
-            return true;
-        }
-        return false;
-    }
-    static int digit(int num ){
-        int count=0;
-        while(num >0){
-            count++;
-            num = num/10;
-        }
-        return count;
+        return digit;
     }
 }
