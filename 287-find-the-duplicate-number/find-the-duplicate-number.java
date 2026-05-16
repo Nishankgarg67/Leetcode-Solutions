@@ -15,7 +15,7 @@ class Solution {
                 return arr[index] ;
             }
         }
-        return arr[arr.length];
+        return -1;
     }
     static void swap(int[] arr ,int first , int second){
         int temp = arr[first];
