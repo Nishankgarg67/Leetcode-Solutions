@@ -1,21 +1,22 @@
 class Solution {
     public int[] twoSum(int[] arr, int target) {
-        int s = 0;
-        int e = arr.length-1;
-        while(s <=e){
-            int sum = arr[s] + arr[e];
-            if(sum ==target){
-                int[] ans= {s+1,e+1};
+        int start  = 0 ;
+        int end = arr.length-1;
+        while(start <= end){
+            int sum =  arr[start] + arr[end];
+            if(sum == target){
+                int ans[]  = {start+1 , end +1};
                 return ans;
             }
-            else if(sum > target){
-                e--;
+            else if(sum > target ){
+                end--;
             }
             else{
-                s++;
+                start++;
             }
         }
-        int[] result = {-1,-1};
+        int result[] = {-1,-1};
         return result;
     }
+
 }
